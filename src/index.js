@@ -4,29 +4,29 @@ import "./style.scss"
 
 // const MyComponent = () => <h1>Webpack &amp; React</h1>
 
-class Image extends React.Component {
-    constructor(props) {
-        super()
-        this.state = {
-            title: "Travis Wall",
-            imgSrc: "./src/shaping-sound.jpg"
-        }
-    }
-    render() {
-        return (
-            <div>
-                <h1>{this.state.title}</h1>
-                <p>{this.props.caption}</p>
-                <div><img src={this.state.imgSrc} /></div>
-            </div>
-        )
-    }
-}
+// class Image extends React.Component {
+//     constructor(props) {
+//         super()
+//         this.state = {
+//             title: "Travis Wall",
+//             imgSrc: "./src/shaping-sound.jpg"
+//         }
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.title}</h1>
+//                 <p>{this.props.caption}</p>
+//                 <div><img src={this.state.imgSrc} /></div>
+//             </div>
+//         )
+//     }
+// }
 
-ReactDom.render(
-    <Image caption="Shaping Sound Dance Troupe" />,
-            document.getElementById("react-container")
-)
+// ReactDom.render(
+//     <Image caption="Shaping Sound Dance Troupe" />,
+//             document.getElementById("react-container")
+// )
 
 // class Message extends React.Component {
 //     render() {
