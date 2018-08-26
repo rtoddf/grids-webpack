@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import "colors.scss";
-@import "fonts.scss";
-@import "mixins.scss";
-
+@import "./base/colors.scss";
+@import "./base/fonts.scss";
+@import "./base/mixins.scss";
+@import "./base/images.scss";
 
 /*
 rem sizes:
@@ -61,50 +61,10 @@ body {
 
 article {
     position: relative;
-    @include border;
-}
-
-img {
-	width: 100%;
-    @include border;
-}
-
-/* image holder */
-figure {
-    margin: 0 0 0.625rem;
-}
-
-figure .filler {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    max-height: 100%;
-    padding-bottom: 56%;
-    overflow: hidden;
-    background: #222;
-}
-
-figure .filler > img {
-    display: block;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    width: auto;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    -webkit-transform: translate(-50%, -25%);
-    -ms-transform: translate(-50%, -25%);
-    transform: translate(-50%, -25%);
-    text-align: center;
-}
-
-figcaption {
-    margin: 0.3125rem auto 0;
-    color: #888;
-    font-size: 0.9375rem;
-    font-weight: 300;
-    line-height: 1rem;
+    padding: 0.625rem;
+    // @include border;
+    background-color: $deep-spiritual-color-two;
+    border-bottom: 1px solid $deep-spiritual-color-five;
 }
 
 /* columns */
