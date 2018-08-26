@@ -68,19 +68,22 @@ article {
 }
 
 /* columns */
+/* The fr unit represents a fraction of the available space in the grid container */
+
+
 .grid,
 .grid[data-col="1"] {
-	grid-template-columns: repeat(1, [col] 1fr);
+	@include grid-template-columns;
 }
 
 [data-col="2"] {
-	grid-template-columns: repeat(2, [col] 1fr);
+	@include grid-template-columns(2);
 }
 
 [data-col="3"],
 [data-col="1-2"],
 [data-col="2-1"] {
-	grid-template-columns: repeat(3, [col] 1fr);
+	@include grid-template-columns(3);
 }
 
 [data-col="4"],
@@ -89,7 +92,7 @@ article {
 [data-col="2-1-1"],
 [data-col="1-2-1"],
 [data-col="1-1-2"] {
-	grid-template-columns: repeat(4, [col] 1fr);
+	@include grid-template-columns(4);
 }
 
 [data-col="5"],
@@ -99,7 +102,7 @@ article {
 [data-col="1-2-1-1"],
 [data-col="1-1-2-1"],
 [data-col="1-1-1-2"] {
-	grid-template-columns: repeat(5, [col] 1fr);
+	@include grid-template-columns(5);
 }
 
 [data-col="6"],
@@ -107,10 +110,92 @@ article {
 [data-col="1-3-1-1"],
 [data-col="1-1-3-1"],
 [data-col="1-1-1-3"] {
-	grid-template-columns: repeat(6, [col] 1fr);
+	@include grid-template-columns(6);
 }
 
 [data-col="4-1-1-1-1"],
 [data-col="1-1-1-1-4"] {
     grid-template-columns: repeat(8, [col] 1fr);
+}
+
+/* twos */
+[data-col="2-1"] > article:nth-child(1) {
+    grid-column: span 2;
+}
+
+[data-col="1-2"] > article:nth-child(2) {
+    grid-column: span 2;
+}
+
+[data-col="3-1"] > article:nth-child(1) {
+    grid-column: span 3;
+}
+
+[data-col="1-3"] > article:nth-child(2) {
+    grid-column: span 3;
+}
+
+[data-col="4-1"] {
+    // @include grids-columns(3fr 1fr);
+    grid-template-columns: 3fr 1fr;
+}
+
+[data-col="1-4"] {
+    // @include grids-columns(1fr 3fr);
+    grid-template-columns: 1fr 3fr;
+}
+
+/* threes */
+[data-col="2-1-1"] > article:nth-child(1) {
+    grid-column: span 2;
+}
+
+[data-col="1-2-1"] > article:nth-child(2) {
+    grid-column: span 2;
+}
+
+[data-col="1-1-2"] > article:nth-child(3) {
+    grid-column: span 2;
+}
+
+/* fours */
+[data-col="2-1-1-1"] > article:nth-child(1) {
+    grid-column: span 2;
+}
+
+[data-col="1-2-1-1"] > article:nth-child(2) {
+    grid-column: span 2;
+}
+
+[data-col="1-1-2-1"] > article:nth-child(3) {
+    grid-column: span 2;
+}
+
+[data-col="1-1-1-2"] > article:nth-child(4) {
+    grid-column: span 2;
+}
+
+[data-col="3-1-1-1"] > article:nth-child(1) {
+    grid-column: span 3;
+}
+
+[data-col="1-3-1-1"] > article:nth-child(2) {
+    grid-column: span 3;
+}
+
+[data-col="1-1-3-1"] > article:nth-child(3) {
+    grid-column: span 3;
+}
+
+[data-col="1-1-1-3"] > article:nth-child(4) {
+    grid-column: span 3;
+}
+
+/* fives */
+[data-col="4-1-1-1-1"] > article:nth-child(1) {
+    grid-column: span 4;
+}
+
+[data-col="1-1-1-1-4"] > article:nth-child(5) {
+    grid-column: span 4;
 }

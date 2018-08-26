@@ -4,3 +4,14 @@
     border-style: $style;
     border-radius: $radius;
 }
+
+@mixin grid-template-columns($numColumns: 1, $fraction: 1fr) {
+    grid-template-columns: repeat($numColumns, [col] $fraction);
+}
+
+@mixin grids-columns($fractions...) {
+    
+    @for $i from 1 through length(#fractions) {
+        grid-template-columns: $i
+    }
+}
