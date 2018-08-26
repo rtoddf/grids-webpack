@@ -1,0 +1,8 @@
+@import "colors.scss";
+
+@mixin border($width: 1px, $style: solid, $radius: 0) {
+    border-width: $width;
+    border-color: $deep-spiritual-color-four;
+    border-style: $style;
+    border-radius: $radius;
+}
