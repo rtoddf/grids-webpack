@@ -10,5 +10,7 @@
 }
 
 @mixin grids-columns($fractions...) {
-    grid-template-columns: @for $fraction in $fractions { $fraction }
-}
+    @each $fraction in $fractions {
+      grid-template-columns: #{$fraction};
+    }
+  }
