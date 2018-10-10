@@ -33,7 +33,7 @@ html {
 }
 
 body {
-    background: $deep-spiritual-color-four;
+    background: $white;
 }
 
 
@@ -64,10 +64,33 @@ ul {
     margin: 0 auto;
 }
 
+[data-theme="index"] ul {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+[data-theme="index"] ul li {
+    border: 1px solid #222;
+    border-bottom: none;
+}
+
+[data-theme="index"] ul li:last-child {
+    border-bottom: 1px solid #222;
+}
+
+[data-theme="index"] ul li a {
+    display: block;
+    padding: 0.625rem;
+    background: rgba(200,200,200, .3);
+    color: #222;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
 article {
     position: relative;
-    padding: 0.625rem;
-    // @include border;
-    background-color: $deep-spiritual-color-two;
-    border-bottom: 1px solid $deep-spiritual-color-five;
+//     padding: 0.625rem;
+//     // @include border;
+//     background-color: $deep-spiritual-color-two;
+//     border-bottom: 1px solid $deep-spiritual-color-five;
 }
