@@ -1,0 +1,21 @@
+.panel {
+    padding: 20px 20px 10px;
+    background: #fff;
+    border: none;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    color: #444;
+    box-shadow:0 2px 26px 4px rgba(0,0,0,0.1);
+
+    img {
+        border: none;
+    }
+
+    figure {
+        margin: 0 -20px 10px;
+    }
+
+    figcaption {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,73 @@
+/*
+rem sizes:
+50px = 3.125rem
+40px = 2.5rem
+30px = 1.875rem
+25px = 1.5625rem
+20px = 1.25rem
+
+16px = 1rem
+15px = .9375rem
+14px = 0.875rem
+13px = 0.8125rem
+12px = 0.75rem
+10px = 0.625rem
+5px = 0.3125rem
+4px = 0.25rem
+3px = 0.1875rem
+2px = 0.125rem
+1px = 0.0625rem */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    color: $deep-spiritual-color-one;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background: $deep-spiritual-color-four;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.625rem;
+}
+
+h2, h3 {
+    font-size: 1.125rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+article {
+    position: relative;
+    padding: 0.625rem;
+    // @include border;
+    background-color: $deep-spiritual-color-two;
+    border-bottom: 1px solid $deep-spiritual-color-five;
+}
