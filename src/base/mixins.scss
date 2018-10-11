@@ -13,4 +13,76 @@
     @each $fraction in $fractions {
       grid-template-columns: #{$fraction};
     }
-  }
+}
+
+@mixin featured-story() {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .tease__img {
+        position: relative;
+        width: 100%;
+
+        img {
+            border-radius: 0;
+        }
+
+        &::before {
+            content: "";
+            width: 1px;
+            margin-left: -1px;
+            float: left;
+            height: 0;
+            padding-top: 56.25%;
+        }
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .tease__content {
+        position: relative;
+        width: 90.64%;
+        margin: -6% auto 0;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: $image-border-radius;
+        box-shadow:0 2px 26px 4px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+
+        .tease__details {
+            padding: 5px 0;
+            font-size:1.125rem;
+            text-align: center;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+
+        .tease__heading {
+            margin: 0 auto;
+            color: #000;
+            font-size: 1.875rem;
+            font-weight: 400;
+            text-align: center;
+
+            a {
+                color: #000;
+            }
+        }
+    }
+
+    @media (min-width: $lg-breakpoint) {
+        figure.tease__img {
+            img {
+                border-radius: $image-border-radius;
+            }
+        }
+
+        .tease__content {
+            margin-bottom: 30px;
+        }
+    }
+}
