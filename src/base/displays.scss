@@ -5,7 +5,7 @@
     right: 0;
     padding: 5px 10px;
     background: rgba(0,0,0,.5);
-    color: #fff;
+    color: $white;
 
     h4 {
         margin-bottom: 0;
@@ -13,13 +13,7 @@
 }
 
 .panel {
-    padding: 20px 20px 10px;
-    background: #fff;
-    border: none;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    color: #444;
-    box-shadow:0 2px 26px 4px rgba(0,0,0,0.1);
+    @include panel();
 
     img {
         border: none;
@@ -36,18 +30,24 @@
 
 .tease-list {
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Average', 'Georgia', serif;
+        font-family: $heading-font;
     }
 
     &.four-item-feature {
         .tease {
-            padding: 28px 20px 0;
+            padding: 0 20px 0;
 
             figure.tease__img {
                 margin: 0;
             }
 
             @include featured-story();
+        }
+
+        @media (min-width: $lg-breakpoint) {
+            .tease {
+                padding-top: 28px;
+            }
         }
 
     }
