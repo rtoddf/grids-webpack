@@ -12,39 +12,28 @@
     }
 }
 
-.panel {
-    @include panel();
-
-    img {
-        border: none;
-    }
-
-    figure {
-        margin: 0 -20px 10px;
-    }
-}
-
 .tease-list {
-    h1, h2, h3, h4, h5, h6 {
-        font-family: $heading-font;
+    &.panel {
+        .tease {
+            @include panel();
+        }
+
+        @media (min-width: $lg-breakpoint) {
+            .tease {
+                margin-top: 30px;
+            }
+        }
     }
 
-    &.four-item-feature {
+    &.feature {
         .tease {
-            padding: 0 20px 0;
-
-            figure.tease__img {
-                margin: 0;
-            }
-
             @include featured-story();
         }
 
         @media (min-width: $lg-breakpoint) {
             .tease {
-                padding-top: 28px;
+                padding-top: 30px;
             }
         }
-
     }
 }

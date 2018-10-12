@@ -94,8 +94,31 @@ ul {
 
 article {
     position: relative;
-//     padding: 0.625rem;
-//     // @include border;
-//     background-color: $deep-spiritual-color-two;
-//     border-bottom: 1px solid $deep-spiritual-color-five;
+}
+
+img {
+	width: 100%;
+}
+
+.img-fluid {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+.img-fluid .img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+figcaption {
+    margin: 0.625rem auto;
+    color: $deep-spiritual-color-four;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1rem;
 }
