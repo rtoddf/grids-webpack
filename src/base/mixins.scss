@@ -23,6 +23,10 @@
     border-radius: $image-border-radius;
     color: $text-color;
     box-shadow: $tease-box-shadow;
+
+    .tease-content {
+        position: relative;
+    }
 }
 
 @mixin featured-story() {
