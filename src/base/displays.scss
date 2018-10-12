@@ -1,13 +1,14 @@
 .tease-list {
+    .tease__details {
+        padding: 0 0 10px;
+        font-size: 1.125rem;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
     &.tile {
         .tease {
             @include tile();
-        }
-
-        @media (min-width: $lg-breakpoint) {
-            .tease {
-                padding-top: 30px;
-            }
         }
     }
 
@@ -15,23 +16,17 @@
         .tease {
             @include panel();
         }
-
-        @media (min-width: $lg-breakpoint) {
-            .tease {
-                margin-top: 30px;
-            }
-        }
     }
 
     &.feature {
         .tease {
             @include featured-story();
         }
+    }
 
-        @media (min-width: $lg-breakpoint) {
-            .tease {
-                padding-top: 30px;
-            }
+    @media (min-width: $lg-breakpoint) {
+        .tease {
+            margin-top: 30px;
         }
     }
 }
