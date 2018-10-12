@@ -15,12 +15,26 @@
     }
 }
 
+@mixin tile() {
+    .tease__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 5px 10px;
+        background: rgba(0,0,0,.5);
+        color: $white;
+    
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @mixin panel() {
     padding: 20px 20px 10px;
     background: $white;
     border: none;
-    -webkit-border-radius: $image-border-radius;
-    border-radius: $image-border-radius;
     color: $text-color;
     box-shadow: $tease-box-shadow;
 
@@ -30,6 +44,11 @@
 
     .tease__text {
         position: relative;
+    }
+
+    @media (min-width: $lg-breakpoint) {
+        -webkit-border-radius: $image-border-radius;
+        border-radius: $image-border-radius;
     }
 }
 
