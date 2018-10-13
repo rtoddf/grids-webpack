@@ -15,18 +15,76 @@
     }
 }
 
-@mixin tile() {
-    .tease__content {
+@mixin transition($property: all, $time: .25s) {
+    transition: $property $time ease;
+}
+
+@mixin tease-details-bottom() {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: rgba(0,0,0,.5);
+    color: $white;
+
+    h4 {
+        margin-bottom: 0;
+    }
+}
+
+@mixin checker() {
+    &[data-image-layout="square"]:after {
+        content: "";
+        float: left;
+        display: block;
+        padding-top: 100%;
+    }
+
+    .box {
         position: absolute;
-        bottom: 0;
+        width: auto;
+        height: auto;
         left: 0;
         right: 0;
-        padding: 5px 10px;
-        background: rgba(0,0,0,.5);
-        color: $white;
-    
-        h4 {
-            margin-bottom: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: #222;
+        transition: all .3s ease;
+
+        &:after {
+            content: "";
+            float: left;
+            display: block;
+            padding-top: 100%;
+        }
+
+        figure {
+            height: 100%;
+
+            &.img-fluid {
+                position: static;
+            }
+
+            img {
+                object-fit: cover;
+                display: block;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                width: 102%;
+                height: 102%;
+                max-width: 102%;
+                max-height: 102%;
+                text-align: center;
+                cursor: pointer;
+                transform: translate(-50%, -25%);
+                transition: all .6s ease;
+            }
         }
     }
 }
@@ -44,6 +102,25 @@
 
     .tease__text {
         position: relative;
+    }
+
+    ul {
+        margin-top: 20px;
+
+        li:after {
+            width: 100%;
+            background-color: $deep-spiritual-color-four;
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        li:last-child:after {
+            margin-bottom: 0;
+            background-color: transparent;
+        }
     }
 
     @media (min-width: $lg-breakpoint) {

@@ -12,6 +12,10 @@
     padding: 0;
 }
 
+.grid[data-margin="0"] {
+    grid-gap: 0;
+}
+
 [data-col="2"],
 [data-col="3"],
 [data-col="4"],
