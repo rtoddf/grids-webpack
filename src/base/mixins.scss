@@ -19,6 +19,10 @@
     transition: $property $time ease;
 }
 
+@mixin box-shadow($blur: 26px, $opacity: .25) {
+    box-shadow: 0 2px $blur 4px rgba(0, 0, 0, $opacity);
+}
+
 @mixin tease-details-bottom() {
     position: absolute;
     bottom: 0;
@@ -92,9 +96,9 @@
 @mixin panel() {
     padding: 20px 20px 10px;
     background: $white;
-    border: none;
+    border: 1px solid $deep-spiritual-color-three;
     color: $text-color;
-    box-shadow: $tease-box-shadow;
+    @include box-shadow();
 
     .tease__img {
         margin: 0 -20px 10px;
@@ -137,9 +141,12 @@
     .tease__img {
         position: relative;
         width: 100%;
+        overflow: visible;
 
         img {
             border-radius: 0;
+            border: 1px solid $deep-spiritual-color-three;
+            @include box-shadow($opacity: .1);
         }
 
         &::before {
@@ -164,9 +171,10 @@
         margin: -6% auto 0;
         padding: 20px 30px;
         background: #fff;
+        border: 1px solid $deep-spiritual-color-three;
         border-radius: $image-border-radius;
-        box-shadow:0 2px 26px 4px rgba(0,0,0,0.1);
         box-sizing: border-box;
+        @include box-shadow();
 
         .tease__details {
             text-align: center;

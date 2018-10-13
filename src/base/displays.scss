@@ -11,6 +11,9 @@
     }
 
     &.checkerboard {
+        border: 1px solid $deep-spiritual-color-three;
+        @include box-shadow();
+
         .tease {
             @include checker();
 
