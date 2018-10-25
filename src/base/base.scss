@@ -52,6 +52,18 @@ h2, h3 {
     font-size: 1.125rem;
 }
 
+[data-theme="dark"] {
+    h3 {
+        margin: 20px 0 0;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .tease-list {
+        margin-top: 0;
+    }
+}
+
 h4 {
     font-size: 1rem;
 }
