@@ -1,14 +1,33 @@
 .tease-list {
-    .tease__details {
-        padding: 0 0 10px;
-        font-size: 1.125rem;
-        line-height: normal;
-        letter-spacing: normal;
+    .tease {
+        position: relative;
+
+        .tease__details {
+            padding: 0 0 10px;
+            font-size: 1.125rem;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+    }
+
+    &.checkerboard {
+        border: 1px solid $deep-spiritual-color-three;
+        @include box-shadow();
+
+        .tease {
+            @include checker();
+
+            .tease__details {
+                @include tease-details-bottom();
+            }
+        }
     }
 
     &.tile {
         .tease {
-            @include tile();
+            .tease__details {
+                @include tease-details-bottom();
+            }
         }
     }
 
@@ -25,8 +44,6 @@
     }
 
     @media (min-width: $lg-breakpoint) {
-        .tease {
-            margin-top: 30px;
-        }
+        margin-top: 30px;
     }
 }
