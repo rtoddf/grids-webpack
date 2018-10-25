@@ -64,6 +64,16 @@ h2, h3 {
     }
 }
 
+[data-theme="eighty-percent"] {
+    .container {
+        width: 80%;
+    }
+
+    .grid {
+        padding: 0;
+    }
+}
+
 h4 {
     font-size: 1rem;
 }
