@@ -1,5 +1,53 @@
 .container {
     &.css-stuff {
+
+        &.pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -260px;
+
+            .grid {
+                padding: 0;
+            }
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+                border-radius: 50%;
+                cursor: pointer;
+                float: left;
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                transition: all 0.2s;
+
+                &:nth-child(1) {
+                    @include animation-pulse01($color: #33ffbb, $delay: 0s);
+                }
+
+                &:nth-child(2) {
+                    @include animation-pulse01($color: #33ffbb, $delay: 0.25s);
+                }
+
+                &:nth-child(3) {
+                    @include animation-pulse01($color: #33ffff, $delay: 0.5s);
+                }
+
+                &:nth-child(4) {
+                    @include animation-pulse01($color: #33ffff, $delay: 0.75s);
+                }
+
+                &:nth-child(5) {
+                    @include animation-pulse01($color: #33bbff, $delay: 1s);
+                }
+
+                &:nth-child(6) {
+                    @include animation-pulse01($color: #33bbff, $delay: 1.25s);
+                }
+            }
+        }
+
         article:nth-child(1) {
             h3 {
                 font-size: 2rem;
@@ -37,3 +85,27 @@
     }
 }
 
+
+// @keyframes r3 {
+// 	0% {
+// 		box-shadow: 0 0 8px 6px rgba(26, 255, 255, 0), 0 0 0px 0px #393939, 0 0 0px 0px rgba(26, 255, 255, 0);
+// 	}
+// 	10% {
+// 		box-shadow: 0 0 8px 6px #1affff, 0 0 12px 10px #393939, 0 0 12px 14px #1affff;
+// 	}
+// 	100% {
+// 		box-shadow: 0 0 8px 6px rgba(26, 255, 255, 0), 0 0 0px 40px #393939, 0 0 0px 40px rgba(26, 255, 255, 0);
+// 	}
+// }
+
+// @keyframes r5 {
+// 	0% {
+// 		box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 0px #393939, 0 0 0px 0px rgba(26, 140, 255, 0);
+// 	}
+// 	10% {
+// 		box-shadow: 0 0 8px 6px #1a8cff, 0 0 12px 10px #393939, 0 0 12px 14px #1a8cff;
+// 	}
+// 	100% {
+// 		box-shadow: 0 0 8px 6px rgba(26, 140, 255, 0), 0 0 0px 40px #393939, 0 0 0px 40px rgba(26, 140, 255, 0);
+// 	}
+// }

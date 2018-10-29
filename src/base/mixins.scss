@@ -205,3 +205,28 @@
         }
     }
 }
+
+// animations
+// @mixin grid-template-columns($numColumns: 1, $fraction: 1fr) {
+@mixin animation-pulse01($color: #f00, $bg-color: #393939, $animation: r1, $duration: 2s, $delay: 0s, $timing: ease-out, $count: infinite) {
+    /* name duration delay timing-function iteration-count */
+    /* these are also available - direction | fill-mode | play-state */
+    background: $color;
+    animation: $animation $duration $delay $timing $count;
+
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+
+    @keyframes r1 {
+        0% {
+            box-shadow: 0 0 8px 6px $color, 0 0 0px 0px $bg-color, 0 0 0px 0px $color;
+        }
+        10% {
+            box-shadow: 0 0 8px 6px $color, 0 0 12px 10px $bg-color, 0 0 12px 14px $color;
+        }
+        100% {
+            box-shadow: 0 0 8px 6px rgba($red, $green, $blue, 0), 0 0 0px 40px $bg-color, 0 0 0px 40px rgba($red, $green, $blue, 0);
+        }
+    }
+}
