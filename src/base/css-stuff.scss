@@ -17,7 +17,6 @@
                 margin: 0 auto;
                 border-radius: 50%;
                 cursor: pointer;
-                float: left;
                 -webkit-transition: all 0.2s;
                 -moz-transition: all 0.2s;
                 transition: all 0.2s;
@@ -45,6 +44,46 @@
                 &:nth-child(6) {
                     @include animation-pulse01($color: #33bbff, $delay: 1.25s);
                 }
+            }
+        }
+
+        &.gradients {
+            .gradient {
+                display: block;
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+                background-image: radial-gradient($white, $deep-spiritual-color-five);
+                border-radius: 50%;
+
+                &.one {
+                    background-image: radial-gradient(circle, $white, $deep-spiritual-color-five);
+                }
+
+                &.two {
+                    background-image: radial-gradient(circle closest-side, $white, $deep-spiritual-color-five);
+                }
+
+                &.three {
+                    background-image: radial-gradient(circle at top right, $white, $deep-spiritual-color-five);
+                }
+
+                &.four {
+                    background: repeating-radial-gradient(circle closest-side, $deep-spiritual-color-five, $white 10%, $deep-spiritual-color-five 25%, $deep-spiritual-color-five 30%);
+                }
+            }
+        }
+
+        &.drop-shadows {
+            .circle {
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 30px auto;
+                border-radius: 50%;
+                cursor: pointer;
+                background: #333;
+                box-shadow:  0 0 4px 4px #333, 0 0 12px 12px #baba71, 0 0 18px 16px #fff;
             }
         }
 
